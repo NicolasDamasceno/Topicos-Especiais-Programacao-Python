@@ -29,21 +29,21 @@ print("\nDados ausentes no DataFrame:")
 print(df.isnull().sum())
 
 # Passo 8: Selecionar uma coluna específica como array Numpy
-colunaEspecifica = df['age'].to_numpy()  # Exemplo com a coluna 'age'
+colunaEspecifica = df['age'].to_numpy()
 print("\nColuna 'age' como Numpy array:")
 print(colunaEspecifica)
 
 # Passo 9: Selecionar duas ou mais colunas específicas como DataFrame
-colunasESpecificas = df[['age', 'sex']]  # Exemplo com as colunas 'age' e 'sex'
-print("\nColunas 'age' e 'sex' como DataFrame:")
+colunasESpecificas = df[['age', 'thalach']]
+print("\nColunas 'age' e 'thalach' como DataFrame:")
 print(colunasESpecificas)
 
 # Passo 10: Selecionar linhas específicas usando loc[]
-linhaEspecifica = df.loc[0]  # Exemplo: Selecionar a primeira linha
+linhaEspecifica = df.loc[0]  
 print("\nPrimeira linha do DataFrame:")
 print(linhaEspecifica)
 
-# Passo 11: Selecionar linhas específicas com base em uma ou mais condições
-linhasFiltradas = df.loc[(df['age'] > 50) & (df['chol'] > 200)]  # Exemplo
+# Passo 11: Selecionar linhas específicas do Dataframe usando o método “loc[] com base em uma ou mais condições
+linhasFiltradas = df.loc[(df['age'] > 50) & (df['chol'] > 200)] 
 print("\nLinhas onde 'age' > 50 e 'chol' > 200:")
 print(linhasFiltradas)
